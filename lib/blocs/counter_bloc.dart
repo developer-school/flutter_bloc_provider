@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CounterBloc extends ChangeNotifier {
-  int _counter = 1;
+  int _counter = 10;
   int get counter => _counter;
 
   set counter(int val) {
@@ -10,12 +10,10 @@ class CounterBloc extends ChangeNotifier {
   }
 
   increment() {
-    _counter++;
-    notifyListeners();
+    counter = counter + 1;
   }
 
   decrement() {
-    _counter--;
-    notifyListeners();
+    counter = counter - 1;
   }
 }
